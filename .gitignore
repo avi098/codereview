@@ -1,6 +1,401 @@
+# ============================================================================
+# AIRMAN GRAPHRAG - .gitignore
+# ============================================================================
+
+# ============================================================================
+# SENSITIVE CREDENTIALS - NEVER COMMIT
+# ============================================================================
 .env
+*.env
+.env.local
+.env.*.local
+secrets.json
+credentials.json
+
+# AWS Credentials
+.aws/
+*.pem
+*.key
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.venv
+env/
 venv/
-*.pyc
-*.pyo
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ============================================================================
+# NEO4J DATABASE
+# ============================================================================
+# Neo4j data and logs (local development)
+neo4j_data/
+neo4j_logs/
+neo4j_import/
+neo4j_plugins/
+
+# Neo4j certificates
+neo4j_certificates/
+
+# ============================================================================
+# VECTOR STORES & INDEXES (if any remain)
+# ============================================================================
+# FAISS indexes
+*.faiss
+*.pkl
+faiss_index/
+vector_store/
+
+# Chroma
+chroma_db/
+chroma/
+
+# ============================================================================
+# CACHE & TEMPORARY FILES
+# ============================================================================
+# Application cache
+cache/
+.cache/
+tmp/
+temp/
+*.tmp
+
+# Local data
+local_data/
+downloads/
+uploads/
+
+# ============================================================================
+# LOGS
+# ============================================================================
+# Application logs
+*.log
+logs/
+*.log.*
+log/
+
+# ============================================================================
+# IDE & EDITORS
+# ============================================================================
+# VSCode
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm
+.idea/
+.idea/*
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# JetBrains
+.idea/
+*.iml
+
+# ============================================================================
+# OPERATING SYSTEM
+# ============================================================================
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# PROJECT SPECIFIC
+# ============================================================================
+# Test data
+test_data/
+sample_data/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Compressed files (unless needed)
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Large PDF collections (keep samples only)
+# Uncomment if you don't want to commit PDFs
+# *.pdf
+
+# Excel test files
+# *.xlsx
+# *.xls
+
+# Image test files
+# *.png
+# *.jpg
+# *.jpeg
+
+# ============================================================================
+# DOCKER (if using local volumes)
+# ============================================================================
+# Docker volumes (if not managed by compose)
+volumes/
+
+# Docker override files
+docker-compose.override.yml
+
+# ============================================================================
+# DOCUMENTATION
+# ============================================================================
+# Keep README, but ignore drafts
+*.draft.md
+NOTES.md
+TODO.md
+PRIVATE.md
+
+# ============================================================================
+# METADATA & STATE FILES
+# ============================================================================
+# S3 metadata (local cache)
+metadata.json
+cache_metadata.json
+
+# Index state
+index_state.json
+
+# ============================================================================
+# MONITORING & PROFILING
+# ============================================================================
+# Profiling data
+*.prof
+*.lprof
+
+# Performance monitoring
+performance_logs/
+
+# ============================================================================
+# MISCELLANEOUS
+# ============================================================================
+# Package files
+*.dmg
+*.pkg
+*.deb
+*.rpm
+
+# Archives
+*.iso
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Node modules (if any frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ============================================================================
+# EXCEPTIONS - FILES TO KEEP
+# ============================================================================
+# Keep requirements file
+!requirements.txt
+
+# Keep docker compose
+!docker-compose.yml
+
+# Keep sample environment (without secrets)
+!.env.example
+!.env.sample
+
+# Keep static assets
+!static/
+!static/**
+
+# Keep documentation
+!README.md
+!CHANGELOG.md
+!LICENSE
